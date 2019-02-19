@@ -13,12 +13,14 @@ import re
 texto_descripcion = """
 Calculadora de subneting ( vlsm ), calcula a partir de los hosts demandados las posible redes.
 ( No tiene control de errores si te pasas en numero de hosts )
-Usage: prog -i st(ip) -c int(cidr) -r int(num_redes[...])
 """
 
 
 # analizador = argparse.ArgumentParser(description=texto_descripcion)
-analizador = argparse.ArgumentParser(description=texto_descripcion)
+analizador = argparse.ArgumentParser(prog="calc-vlsm.py",
+                                    usage="%(prog)s -i str(ip) -c int(cidr) -r int(num_redes[...])",
+                                    formatter_class=argparse.RawDescriptionHelpFormatter,
+                                    description=texto_descripcion)
 analizador.add_argument("-i","--ip", help="ip de red de donde partir a calcular redes, en formato decimal", required=True)
 analizador.add_argument("-c","--cidr", help="cidr de la ip de red base", type=int, required=True)
 analizador.add_argument("-n","--hosts", help="numero de hosts que se desean por red", required=True, nargs="*", type=int)
