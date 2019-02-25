@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module subneting</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>subneting</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/debian/Documentos/repositorios/calculadora_subneting/subneting.py">/home/debian/Documentos/repositorios/calculadora_subneting/subneting.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;@jorgepastorr<br>
+#&nbsp;10/02/2019<br>
+#&nbsp;creando&nbsp;funciones&nbsp;para&nbsp;calculadora&nbsp;ip</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-anyado_formato"><strong>anyado_formato</strong></a>(mascara_sin_corte)</dt><dd><tt>F.&nbsp;dada&nbsp;una&nbsp;mascara&nbsp;de&nbsp;bits&nbsp;sin&nbsp;formato&nbsp;añade&nbsp;.&nbsp;de&nbsp;formatos<br>
+octeto.octeto.octeto.octeto<br>
+<a href="#-anyado_formato">anyado_formato</a>(&nbsp;str(mascara_sin_corte)&nbsp;)<br>
+return&nbsp;str</tt></dd></dl>
+ <dl><dt><a name="-binario_a_decimal"><strong>binario_a_decimal</strong></a>(binario)</dt><dd><tt>F.&nbsp;convierte&nbsp;de&nbsp;binario&nbsp;a&nbsp;decimal<br>
+<a href="#-binario_a_decimal">binario_a_decimal</a>(&nbsp;str(binario)&nbsp;)<br>
+return&nbsp;int</tt></dd></dl>
+ <dl><dt><a name="-bits_para_red"><strong>bits_para_red</strong></a>(num_redes, host=None)</dt><dd><tt>F.&nbsp;dado&nbsp;un&nbsp;numero&nbsp;de&nbsp;redes&nbsp;calcula&nbsp;el&nbsp;numero&nbsp;de&nbsp;bits&nbsp;que&nbsp;necesita&nbsp;para&nbsp;dichas&nbsp;redes<br>
+num_redes:&nbsp;numero&nbsp;de&nbsp;redes&nbsp;<br>
+host:&nbsp;por&nbsp;defecto&nbsp;None,&nbsp;si&nbsp;se&nbsp;activa&nbsp;con&nbsp;True,&nbsp;num_redes&nbsp;se&nbsp;convierte&nbsp;en&nbsp;bits,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calcula&nbsp;numero&nbsp;de&nbsp;hosts&nbsp;permitidos&nbsp;con&nbsp;dichos&nbsp;bits.<br>
+&nbsp;<br>
+<a href="#-bits_para_red">bits_para_red</a>(&nbsp;int(num_redes),&nbsp;opcional&nbsp;True&nbsp;)<br>
+return&nbsp;int</tt></dd></dl>
+ <dl><dt><a name="-cidr_a_masc_bin"><strong>cidr_a_masc_bin</strong></a>(num_cidr)</dt><dd><tt>F.&nbsp;convierte&nbsp;numero&nbsp;cidr&nbsp;en&nbsp;mascara&nbsp;binaria<br>
+cidr_a_bin(&nbsp;int(num_cidr)&nbsp;)<br>
+return&nbsp;str(mascara)</tt></dd></dl>
+ <dl><dt><a name="-cird_num_hosts"><strong>cird_num_hosts</strong></a>(num_cidr)</dt><dd><tt>F.&nbsp;retorna&nbsp;numero&nbsp;de&nbsp;hosts&nbsp;que&nbsp;son&nbsp;posibles&nbsp;asignar&nbsp;con&nbsp;ese&nbsp;cidr<br>
+<a href="#-cird_num_hosts">cird_num_hosts</a>(&nbsp;int(num_cidr)&nbsp;)<br>
+return&nbsp;int</tt></dd></dl>
+ <dl><dt><a name="-datos_red"><strong>datos_red</strong></a>(ip_binaria, cidr_red, cidr_subred, red_num, dato)</dt><dd><tt>F.&nbsp;extrae&nbsp;datos&nbsp;de&nbsp;la&nbsp;nueva&nbsp;red&nbsp;de&nbsp;subneting<br>
+<a href="#-datos_red">datos_red</a>(&nbsp;str(ip_binaria),&nbsp;int(cidr_red),&nbsp;int(cidr_subred),&nbsp;int(red_num),&nbsp;str(dato)&nbsp;)<br>
+ip_binaria:&nbsp;ip&nbsp;binaria&nbsp;en&nbsp;formato&nbsp;x.x.x.x<br>
+cidr_red:&nbsp;cidr&nbsp;red&nbsp;original<br>
+cidr_subred:&nbsp;cird&nbsp;de&nbsp;la&nbsp;subred<br>
+red_num:&nbsp;nmero&nbsp;de&nbsp;red&nbsp;a&nbsp;la&nbsp;que&nbsp;extraer&nbsp;datos&nbsp;0-?<br>
+dato:&nbsp;dato&nbsp;que&nbsp;extraer&nbsp;opciones:&nbsp;(&nbsp;red,&nbsp;primer_host,&nbsp;ultimo_host,&nbsp;broadcast&nbsp;)<br>
+return&nbsp;str</tt></dd></dl>
+ <dl><dt><a name="-decimal_a_bin"><strong>decimal_a_bin</strong></a>(num)</dt><dd><tt>F.&nbsp;que&nbsp;convierte&nbsp;una&nbsp;cadena&nbsp;de&nbsp;decimal&nbsp;a&nbsp;binario<br>
+<a href="#-decimal_a_bin">decimal_a_bin</a>(&nbsp;int&nbsp;)<br>
+return&nbsp;str</tt></dd></dl>
+ <dl><dt><a name="-ip_bin_a_decimal"><strong>ip_bin_a_decimal</strong></a>(ip_bin)</dt><dd><tt>F.&nbsp;convierte&nbsp;ip&nbsp;binaria&nbsp;a&nbsp;decimal&nbsp;separando&nbsp;octetos&nbsp;por&nbsp;.<br>
+Formato:&nbsp;octeto.octeto.octeto.octeto<br>
+<a href="#-ip_decim_a_bin">ip_decim_a_bin</a>(&nbsp;str(ip_bin)&nbsp;)<br>
+return&nbsp;str</tt></dd></dl>
+ <dl><dt><a name="-ip_decim_a_bin"><strong>ip_decim_a_bin</strong></a>(ip_dec)</dt><dd><tt>F.&nbsp;convierte&nbsp;ip&nbsp;decimal&nbsp;a&nbsp;binaria&nbsp;separando&nbsp;octetos&nbsp;por&nbsp;.<br>
+Formato:&nbsp;octeto.octeto.octeto.octeto<br>
+<a href="#-ip_decim_a_bin">ip_decim_a_bin</a>(&nbsp;str(ip_dec)&nbsp;)<br>
+return&nbsp;str</tt></dd></dl>
+ <dl><dt><a name="-masc_bin_a_cidr"><strong>masc_bin_a_cidr</strong></a>(masc_bin)</dt><dd><tt>F.&nbsp;convierte&nbsp;mascara&nbsp;binaria&nbsp;en&nbsp;numero&nbsp;de&nbsp;cird<br>
+Formato:&nbsp;octeto.octeto.octeto.octeto<br>
+<a href="#-masc_bin_a_cidr">masc_bin_a_cidr</a>(&nbsp;str(masc_bin)&nbsp;)<br>
+return&nbsp;int</tt></dd></dl>
+</td></tr></table>
+</body></html>
