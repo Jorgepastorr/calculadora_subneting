@@ -125,9 +125,6 @@ for vuelta_final in lista_vueltas_por_red:
 
 # Muestra de datos 
 
-# for i in info_redes:
-#     print(i)      
-
 cont = 1
 for red in info_redes:
     print(f"""
