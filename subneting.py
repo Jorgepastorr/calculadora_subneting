@@ -156,11 +156,12 @@ def datos_red(ip_binaria, cidr_red, cidr_subred, red_num, dato):
 
     # crear corte con primer cidr
     red = ip_sin_formato[:cidr_red]
-
+    
     # inserto red desde el corte
     bits_necesarios = cidr_subred - cidr_red 
     if bits_necesarios > 0  :
-        red += decimal_a_bin(red_num)[-(bits_necesarios):]
+        
+        red += f"{int(decimal_a_bin(red_num)):0{bits_necesarios}}"
 
     # rellenar al gusto segun dato
     if dato == "red":

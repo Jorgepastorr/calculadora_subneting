@@ -122,6 +122,9 @@ for vuelta_final in lista_vueltas_por_red:
             posicion_red += 1
 
 
+# for i in info_redes:
+#     print(i)
+# exit(0)
 
 # Muestra de datos 
 
